@@ -4,7 +4,23 @@
 <meta charset="UTF-8">
 <title>Introducing Events</title>
 <link href="../_css/site.css" rel="stylesheet">
-
+<script src="../jquery-2.1.0.min.js"></script>
+<script>
+var number=1;
+$(document).ready(function() {
+	$('html').dblclick(function() {
+		alert('ouch');
+	}); //end double click
+	$('a').mouseover(function() {
+		var message = "<p>You moused over a link</p>";
+		$('.main').append(message);
+	}); // end mouseover
+	$('#button').click(function() {
+	 
+	 $(this).val("Marcel Redel");
+	}); // end click
+}); //end ready
+</script>
 </head>
 <body>
 <div class="wrapper">
